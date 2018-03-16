@@ -30,3 +30,10 @@ echo "https://docs.docker.com/machine/install-machine/#install-machine-directly"
 curl -L https://github.com/docker/machine/releases/download/v0.14.0/docker-machine-`uname -s`-`uname -m` >/tmp/docker-machine && \
 sudo install /tmp/docker-machine /usr/local/bin/docker-machine
 docker-machine version
+
+echo "--------- VIRTUALBOX -----------"
+echo "https://www.virtualbox.org/wiki/Linux_Downloads"
+wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
+wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install virtualbox-5.2

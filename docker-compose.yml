@@ -14,6 +14,10 @@ services:
 
 networks:
     stacknet:
+        
+volumes:
+    backend_volume:
+    frontend_volume:
 
 configs:
     nginx_config:
