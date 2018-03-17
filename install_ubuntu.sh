@@ -33,7 +33,9 @@ docker-machine version
 
 echo "--------- VIRTUALBOX -----------"
 echo "https://www.virtualbox.org/wiki/Linux_Downloads"
+sudo add-apt-repository -r "deb https://download.virtualbox.org/virtualbox/debian ${UBUNTU_NAME} contrib"
+sudo add-apt-repository "deb https://download.virtualbox.org/virtualbox/debian ${UBUNTU_NAME} contrib"
 wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-key add -
 wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
 sudo apt-get update
-sudo apt-get install virtualbox-5.2
+sudo apt-get -qq install virtualbox-5.2
